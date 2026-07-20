@@ -191,7 +191,8 @@
           <li>
             <strong>On-device preferences</strong> — such as onboarding answers,
             display preferences (for example grid style or layout), and similar
-            settings stored locally.
+            settings. These preferences sync via your Apple iCloud account when
+            iCloud is enabled (see below).
           </li>
         </ul>
         <p>
@@ -204,30 +205,41 @@
         <h2>4. Where your data lives</h2>
         <ul>
           <li>
-            <strong>On your Apple devices.</strong> Habit and completion data
-            are stored locally using Apple frameworks (including SwiftData /
-            on-device storage).
+            <strong>On your Apple devices.</strong> Habit, completion, and
+            challenge data are stored locally using Apple frameworks (including
+            SwiftData).
+          </li>
+          <li>
+            <strong>iCloud / CloudKit (your Apple ID).</strong> When you are
+            signed into iCloud on the device, Habitix automatically syncs your
+            habits, completion logs, challenge progress, and onboarding /
+            settings preferences through Apple’s private CloudKit database and
+            iCloud Key-Value Store associated with your Apple ID. This lets you
+            restore data after reinstalling Habitix and use the same data on
+            your other iPhone or iPad (including an iPad app running on Apple
+            silicon Mac). Habitix does not operate a separate Habitix cloud
+            account.
           </li>
           <li>
             <strong>App Group storage on your devices.</strong> Habitix may
             share a limited snapshot of habit progress with Habitix widgets and,
             if installed, the Habitix Apple Watch app via Apple’s App Group and
-            Watch Connectivity mechanisms. This sharing stays within your Apple
-            devices and Apple system services — it is not a Habitix-operated
-            cloud database.
+            Watch Connectivity mechanisms.
           </li>
           <li>
             <strong>Apple services.</strong> Purchases, subscriptions,
-            restorations, and related receipts are handled by Apple. We receive
-            entitlement information needed to unlock paid features; we do not
-            receive your full payment card details.
+            restorations, and related receipts are handled by Apple StoreKit /
+            App Store. Subscription status is <strong>not</strong> synced
+            through Habitix’s iCloud preferences — each device verifies Pro
+            access with Apple. We do not receive your full payment card details.
           </li>
         </ul>
         <p>
-          If you use Apple features such as iCloud Backup for your device, Apple
-          may include App data in backups according to your Apple ID and device
-          settings. That processing is governed by Apple’s privacy policy and
-          your Apple settings.
+          If iCloud is turned off or unavailable, Habitix continues to work with
+          on-device storage only. Device-level iCloud Backup may also include
+          App data according to your Apple ID and device settings; that
+          processing is governed by Apple’s privacy policy and your Apple
+          settings.
         </p>
 
         <h2>5. How we use information</h2>
@@ -235,7 +247,8 @@
         <ul>
           <li>
             Provide Habitix features (tracking, reminders, streaks, challenges,
-            widgets, Watch companion, insights).
+            widgets, Watch companion, insights) and sync your data across your
+            Apple devices via iCloud when enabled.
           </li>
           <li>Process subscriptions and restore purchases through Apple.</li>
           <li>
@@ -286,9 +299,9 @@
         <p>
           We do <strong>not</strong> show third-party display ads inside Habitix
           today, and we do <strong>not</strong> use your habit history to build
-          advertising profiles for third-party ads inside the App. You can change
-          tracking permission anytime in iOS Settings → Privacy &amp; Security →
-          Tracking.
+          advertising profiles for third-party ads inside the App. You can
+          change tracking permission anytime in iOS Settings → Privacy &amp;
+          Security → Tracking.
         </p>
         <p>
           Apple may also provide aggregated, privacy-preserving developer
@@ -301,8 +314,8 @@
         <ul>
           <li>
             <strong>With Apple</strong> — as required to deliver App Store
-            distribution, StoreKit purchases, notifications, widgets, and Watch
-            sync.
+            distribution, StoreKit purchases, notifications, widgets, Watch
+            sync, and iCloud / CloudKit data sync for your Apple ID.
           </li>
           <li>
             <strong>With service providers</strong> — we use Google Firebase /
@@ -366,8 +379,14 @@
             → Tracking.
           </li>
           <li>
+            Control iCloud for Habitix in iOS Settings → [Your Name] → iCloud
+            (sign out or disable iCloud to stop CloudKit / Key-Value sync; local
+            data may remain on the device).
+          </li>
+          <li>
             Delete habits or uninstall Habitix to remove on-device Habitix data
-            (subject to backups).
+            (iCloud copies may remain until removed via your Apple ID / iCloud
+            data controls, subject to Apple’s retention).
           </li>
           <li>
             Manage subscriptions and payment methods in Apple ID →
