@@ -260,17 +260,40 @@
           Habitix reminder schedules.
         </p>
 
-        <h2>7. Analytics and tracking</h2>
+        <h2>7. Analytics and advertising measurement</h2>
         <p>
           Habitix’s in-app “Insights” screens summarize your own habit data on
-          device. As of the effective date above, Habitix does not integrate
-          third-party advertising SDKs or third-party behavioral advertising
-          trackers.
+          device.
         </p>
         <p>
-          Apple may provide aggregated, privacy-preserving developer analytics
-          (for example App Store analytics or crash reports) according to your
-          device and App Store settings.
+          We use <strong>Google Firebase Analytics</strong> (which reports into
+          Google Analytics) to understand app usage and to measure the
+          effectiveness of our marketing — for example app opens, onboarding
+          completion, paywall views, subscription outcomes, and anonymous
+          habit-interaction events (such as that a habit was created or logged,
+          without sending habit names or personal notes).
+        </p>
+        <p>
+          To support <strong>Google Ads</strong> and similar app-install /
+          conversion campaigns, we may collect the device’s advertising
+          identifier (<strong>IDFA</strong>) when you grant permission through
+          Apple’s App Tracking Transparency prompt. We also use Apple’s
+          privacy-preserving <strong>SKAdNetwork</strong> attribution where
+          available (including when tracking permission is declined). These
+          signals help us understand which ads led to installs and in-app
+          conversions; they are not used to read your habit names or notes.
+        </p>
+        <p>
+          We do <strong>not</strong> show third-party display ads inside Habitix
+          today, and we do <strong>not</strong> use your habit history to build
+          advertising profiles for third-party ads inside the App. You can change
+          tracking permission anytime in iOS Settings → Privacy &amp; Security →
+          Tracking.
+        </p>
+        <p>
+          Apple may also provide aggregated, privacy-preserving developer
+          analytics (for example App Store analytics or crash reports) according
+          to your device and App Store settings.
         </p>
 
         <h2>8. Sharing of information</h2>
@@ -282,10 +305,12 @@
             sync.
           </li>
           <li>
-            <strong>With service providers</strong> — only if we later use
-            providers that process data on our behalf under contract (for
-            example email support tooling). We will update this policy if that
-            changes in a material way.
+            <strong>With service providers</strong> — we use Google Firebase /
+            Google Analytics / Google Ads measurement tools to process
+            product-analytics and advertising-attribution events on our behalf,
+            and may use other providers under contract (for example email
+            support tooling). We will update this policy if sharing changes in a
+            material way.
           </li>
           <li>
             <strong>For legal reasons</strong> — if required by law, regulation,
@@ -336,6 +361,10 @@
         <h2>12. Your privacy choices</h2>
         <ul>
           <li>Control notification permissions in iOS Settings.</li>
+          <li>
+            Control App Tracking (IDFA) in iOS Settings → Privacy &amp; Security
+            → Tracking.
+          </li>
           <li>
             Delete habits or uninstall Habitix to remove on-device Habitix data
             (subject to backups).
